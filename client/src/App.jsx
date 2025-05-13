@@ -1,13 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
-   <>
-   <h1>Welcome to Ecommerce website</h1>
-   
-   </>
+    <>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
   );
 }
 
